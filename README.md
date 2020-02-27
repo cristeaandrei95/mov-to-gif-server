@@ -2,6 +2,7 @@
 
 ## Scope
 I wanted to build an application that converts my screen recordings to gif animations for my Github pull requests.
+This project requires it's client in order to work which can be found [here](https://github.com/cristeaandrei95/mov-to-gif-client).
 
 ## Prerequisites
 - [FFmpeg](http://ffmpeg.org/) [🐓🐓🐓🐓](http://en.wikipedia.org/wiki/FFmpeg#History) (`$ brew install ffmpeg`)

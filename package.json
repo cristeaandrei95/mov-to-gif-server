@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node index.js"
+    "start": "node index.js",
+    "compile": "tsc && node ./built/index.js",
+    "dev": "nodemon -e ts  --exec \"npm run compile\""
   },
   "author": "",
   "license": "ISC",
@@ -17,5 +19,9 @@
     "fs-extra": "^8.1.0",
     "gifify": "^2.4.3",
     "nanoid": "^2.1.7"
+  },
+  "devDependencies": {
+    "@types/node": "^13.7.7",
+    "typescript": "^3.8.3"
   }
 }

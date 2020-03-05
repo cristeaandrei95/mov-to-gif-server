@@ -8,20 +8,8 @@ import { readDir, mkdir, execShell } from "../../utils/promisified";
 
 dotenv.config();
 
-const UPLOAD_DIR = path.join(
-  __dirname,
-  "..",
-  "..",
-  "..",
-  process.env.UPLOAD_DIR
-);
-const OUTPUT_DIR = path.join(
-  __dirname,
-  "..",
-  "..",
-  "..",
-  process.env.OUTPUT_DIR
-);
+const UPLOAD_DIR = path.join(__dirname, "..", "..", process.env.UPLOAD_DIR);
+const OUTPUT_DIR = path.join(__dirname, "..", "..", process.env.OUTPUT_DIR);
 
 const filesPath = ticketID => path.join(UPLOAD_DIR, ticketID);
 const outputPath = ticketID => path.join(OUTPUT_DIR, `${ticketID}.zip`);

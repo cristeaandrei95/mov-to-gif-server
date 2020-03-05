@@ -1,5 +1,5 @@
 import * as fs from "fs";
-import archiver from "archiver";
+import * as archiver from "archiver";
 
 export default (inputPath, outputPath) =>
   new Promise((resolve, reject) => {
@@ -14,7 +14,7 @@ export default (inputPath, outputPath) =>
 
     archive.on("warning", err => {
       if (err.code === "ENOENT") {
-        // I should log warning here
+        console.error(err);
       } else {
         reject(err);
       }

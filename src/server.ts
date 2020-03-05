@@ -1,5 +1,6 @@
 import * as fastify from "fastify";
-import * as path from "path";
+import * as fileUpload from "fastify-file-upload";
+import * as fastifyCors from "fastify-cors";
 import routes from "./api/routes/v1/";
 
 const port = Number(process.env.PORT) || 3000;
@@ -14,6 +15,11 @@ const createServer = options => {
     }
   });
 
+  // register middlewares
+  server.register(fileUpload);
+  server.register(fastifyCors, {
+    origin: "http://localhost:3000"
+  });
   server.register(routes, { prefix: "api/v1" });
 
   // start the server

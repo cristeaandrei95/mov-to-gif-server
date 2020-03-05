@@ -1,16 +1,16 @@
 {
   "name": "gif-maker-server",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "A server that converts video files to gifs",
+  "main": "./src/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node index.js",
     "compile": "tsc && node ./built/index.js",
     "dev": "nodemon -e ts  --exec \"npm run compile\""
   },
-  "author": "",
-  "license": "ISC",
+  "author": "Andrei Cristea",
+  "license": "MIT",
   "dependencies": {
     "archiver": "^3.1.1",
     "dotenv": "^8.2.0",

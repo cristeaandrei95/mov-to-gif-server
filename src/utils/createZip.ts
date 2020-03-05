@@ -1,7 +1,7 @@
-const fs = require("fs");
-const archiver = require("archiver");
+import * as fs from "fs";
+import * as archiver from "archiver";
 
-module.exports = (inputPath, outputPath) =>
+export default (inputPath, outputPath) =>
   new Promise((resolve, reject) => {
     const output = fs.createWriteStream(outputPath);
     const archive = archiver("zip", {
@@ -14,7 +14,7 @@ module.exports = (inputPath, outputPath) =>
 
     archive.on("warning", err => {
       if (err.code === "ENOENT") {
-        // I should log warning here
+        console.error(err);
       } else {
         reject(err);
       }

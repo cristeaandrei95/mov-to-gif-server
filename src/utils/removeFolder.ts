@@ -1,6 +1,6 @@
-const fs = require("fs-extra");
+import * as fs from "fs-extra";
 
-module.exports = async folder => {
+export default async folder => {
   try {
     await fs.remove(folder);
   } catch (err) {

@@ -1,6 +1,6 @@
-import * as fs from "fs-extra";
+import * as fs from 'fs-extra';
 
-export default async folder => {
+export default async (folder) => {
   try {
     await fs.remove(folder);
   } catch (err) {

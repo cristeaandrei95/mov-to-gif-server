@@ -1,8 +1,8 @@
-import * as fs from "fs";
-import * as path from "path";
-import * as dotenv from "dotenv";
-import { mkdir } from "./utils/promisified";
-import createServer from "./server";
+import * as fs from 'fs';
+import * as path from 'path';
+import * as dotenv from 'dotenv';
+import { mkdir } from './utils/promisified';
+import createServer from './server';
 
 dotenv.config();
 const uploadPath = path.join(__dirname, process.env.UPLOAD_DIR);
@@ -16,6 +16,6 @@ if (!fs.existsSync(outputPath)) {
   mkdir(outputPath);
 }
 
-const server = createServer({
-  logSeverity: "info"
+createServer({
+  logSeverity: 'info',
 });

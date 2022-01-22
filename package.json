@@ -19,7 +19,7 @@
     "fastify-file-upload": "^2.0.1",
     "fs-extra": "^8.1.0",
     "gifify": "^2.4.3",
-    "nanoid": "^2.1.7"
+    "nanoid": "^3.1.31"
   },
   "devDependencies": {
     "@types/node": "^13.7.7",
